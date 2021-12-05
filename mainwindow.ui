@@ -6,59 +6,203 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>641</width>
-    <height>347</height>
+    <width>780</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="Position">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>68</width>
-      <height>22</height>
+      <x>20</x>
+      <y>0</y>
+      <width>81</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Position</string>
+     <string>Debug Console</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Moving">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>68</width>
-      <height>22</height>
+      <x>220</x>
+      <y>22</y>
+      <width>531</width>
+      <height>121</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Moving</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="2">
+      <widget class="QLabel" name="table">
+       <property name="text">
+        <string>table</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="Moving">
+       <property name="text">
+        <string>Moving</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="Work">
+       <property name="text">
+        <string>Work</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="home">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>home</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="moving">
+       <property name="text">
+        <string>moving</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="stopped">
+       <property name="text">
+        <string>stopped</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="interrupted">
+       <property name="text">
+        <string>interrupted</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="serve">
+       <property name="text">
+        <string>serve</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="admin">
+       <property name="text">
+        <string>admin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="succeeded">
+       <property name="text">
+        <string>succeeded</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="Card">
+       <property name="text">
+        <string>Card</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="order">
+       <property name="text">
+        <string>order</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="rest">
+       <property name="text">
+        <string>rest</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="mmoving">
+       <property name="text">
+        <string>moving</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="failed">
+       <property name="text">
+        <string>failed</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="Position">
+       <property name="text">
+        <string>Position State</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="Work">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>90</y>
-      <width>68</width>
-      <height>22</height>
+      <x>400</x>
+      <y>170</y>
+      <width>71</width>
+      <height>94</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Work</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="bettery4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bettery3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bettery2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="battery1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="Battery">
+   <widget class="QLabel" name="lbBettery">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>68</width>
+      <x>320</x>
+      <y>180</y>
+      <width>72</width>
       <height>22</height>
      </rect>
     </property>
@@ -66,264 +210,96 @@
      <string>Battery</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Card">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>570</x>
       <y>170</y>
-      <width>68</width>
+      <width>71</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="v4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="v3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="v2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="v1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="lbVelocity">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>180</y>
+      <width>72</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>Card</string>
+     <string>Velocity</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Speaker">
+   <widget class="QLabel" name="lbBetteryC">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>320</x>
       <y>210</y>
-      <width>68</width>
+      <width>72</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>Speaker</string>
+     <string>Battery</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="home">
+   <widget class="QLabel" name="lbVelocityC">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>10</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>home</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="table">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>10</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>table</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="moving">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>10</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>moving</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="interrupted">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>50</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>interrupted</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="mmoving">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>50</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>moving</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="stopped">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>50</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>stopped</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="order">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>90</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>order</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="rest">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>90</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>rest</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="admin">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>90</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>admin</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="nothing">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>130</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>nothing</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="full">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>130</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>full</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="half">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>130</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>half</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="succeeded">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>170</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>succeeded</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="failed">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>170</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>failed</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="hi">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
+      <x>490</x>
       <y>210</y>
-      <width>119</width>
-      <height>27</height>
+      <width>72</width>
+      <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>hi</string>
+     <string>Velocity</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="hi_2">
+   <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>210</y>
-      <width>119</width>
-      <height>27</height>
+      <x>10</x>
+      <y>20</y>
+      <width>201</width>
+      <height>351</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>eat</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="serve">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>90</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>serve</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="interruped">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>90</y>
-      <width>119</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>interruped</string>
     </property>
    </widget>
   </widget>
@@ -332,8 +308,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>641</width>
-     <height>28</height>
+     <width>780</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
