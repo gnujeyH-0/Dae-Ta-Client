@@ -11,11 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // Client setup
     connect(c, SIGNAL(lineReaded()), this, SLOT(updateWindow()));
 
-    connect(ui->v1, SIGNAL(clicked()), this, SLOT(updateWindow()));
-    
     connect(this, SIGNAL(updateVelocitySignal()), this, SLOT(updateVelocity()));
 
-    updateVelocity1();
     // Button setup
     connect(ui->v4, SIGNAL(clicked()), this, SLOT(updateVelocity4()));
     connect(ui->v3, SIGNAL(clicked()), this, SLOT(updateVelocity3()));
@@ -36,6 +33,8 @@ MainWindow::~MainWindow()
 void MainWindow::connected(){
     ui->listWidget->addItem(QString("Server is connected"));
     ui->listWidget->scrollToBottom();
+    
+    updateVelocity1();
 }
 
 void MainWindow::updateVelocity1()
@@ -112,15 +111,26 @@ void MainWindow::updateVelocity4()
 
 
 void MainWindow::updateVelocity(){
-    // c->line
     ui->listWidget->addItem(QString("velocity Changed -> %1").arg(velocity));
     ui->listWidget->scrollToBottom();
     ui->lbVelocityC->setText(QString("%1").arg(velocity));
+    c->sendMessage();
 }
 
-void MainWindow::updateStateLocation(){
-    Location stateLocation=HOME;
 
+void MainWindow::updateWindow(){
+
+    // Debug Console
+    ui->listWidget->addItem(QString("stateLocation:%1").arg(c->m.stateLocation));
+    ui->listWidget->addItem(QString("bettery:%1").arg(c->m.bettery));
+    ui->listWidget->addItem(QString("velocity:%1").arg(c->m.velocity));
+    ui->listWidget->addItem(QString("moving:%1").arg(c->m.moving));
+    ui->listWidget->addItem(QString("card:%1").arg(c->m.card));
+    ui->listWidget->addItem(QString("work:%1").arg(c->m.work));
+    
+    ui->listWidget->scrollToBottom();
+
+    // Location Status
     ui->home->setStyleSheet("QLabel{"
                           "background-color:url(:/transparent.png);;"
                           "}");
@@ -132,30 +142,195 @@ void MainWindow::updateStateLocation(){
     ui->table->setStyleSheet("QLabel{"
                           "background-color:url(:/transparent.png);;"
                           "}");
-    switch(stateLocation){
-    case HOME:
-        ui->home->setStyleSheet("QLabel{"
-                              "background-color:rgb(187,187,187);"
-                              "}");
-        break;
-    case MOVING:
-        ui->moving->setStyleSheet("QLabel{"
-                              "background-color:rgb(187,187,187);"
-                              "}");
-        break;
-    default:
-        ui->table->setStyleSheet("QLabel{"
-                              "background-color:rgb(187,187,187);"
-                              "}");
-        break;
-
+    switch(c->m.stateLocation){
+        case HOME:
+            ui->home->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case MOVING:
+            ui->moving->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        default:
+            ui->table->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
     }
-}
 
-void MainWindow::updateWindow(){
-    ui->listWidget->addItem(QString("stateLocation:%1").arg(c->m.stateLocation));
-    ui->listWidget->addItem(QString("stateLocation:%1").arg(c->m.stateLocation));
-    ui->listWidget->scrollToBottom();
+    // Location Status
+    ui->mmoving->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+    ui->stopped->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+    ui->interrupted->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+    switch(c->m.moving){
+        case 0:
+            ui->stopped->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 1:
+            ui->mmoving->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 2:
+            ui->interrupted->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+    }
+
+
+
+    // Cart Status
+    ui->succeeded->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+    ui->failed->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+  
+    switch(c->m.card){
+        case 0:
+            ui->failed->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 1:
+            ui->succeeded->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+    }
+
+
+
+    // Work Status
+    ui->rest->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+    ui->admin->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+
+    ui->order->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+    ui->serve->setStyleSheet("QLabel{"
+                          "background-color:url(:/transparent.png);;"
+                          "}");
+    switch(c->m.work){
+        case 0:
+            ui->admin->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 1:
+            ui->rest->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 2:
+            ui->serve->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;
+        case 3:
+            ui->order->setStyleSheet("QLabel{"
+                                "background-color:rgb(187,187,187);"
+                                "}");
+            break;            
+    }
+
+
+    // Battery Status
+    ui->lbBetteryC->setText(QString("%1").arg(c->m.bettery));
+    if(c->m.bettery>75){
+        ui->bettery1->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery2->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery3->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery4->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+    }
+    else if(c->m.bettery>50){
+        ui->bettery1->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);;"
+                            "}");
+        ui->bettery2->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery3->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery4->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+    }
+    else if(c->m.bettery>25){
+        ui->bettery1->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery2->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery3->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery4->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+    }
+    else if(c->m.bettery>10){
+        ui->bettery1->setStyleSheet("QPushButton{"
+                            "background-color:rgb(187,187,187);"
+                            "}");
+        ui->bettery2->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery3->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery4->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+    }
+    else{
+        ui->bettery1->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery2->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery3->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+        ui->bettery4->setStyleSheet("QPushButton{"
+                            "background-color:#ffffff;"
+                            "}");
+    }
+
+
+    // 
 }
 
 

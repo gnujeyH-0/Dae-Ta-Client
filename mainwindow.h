@@ -29,7 +29,6 @@ public slots:
     void updateVelocity3();
     void updateVelocity2();
     void updateVelocity1();
-    void updateStateLocation();
     void connected();
 
 signals:

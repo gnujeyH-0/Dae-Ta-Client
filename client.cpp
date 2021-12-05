@@ -42,11 +42,15 @@ void client::connected()
     emit connectedSignal();
 }
 
-void client::sendMessage(QString message)
+void client::sendMessage()
 {
-    message = QString("hello world!").trimmed();
-    if (!message.isEmpty())
-    {
-        socket->write(QString(message + "\n").toUtf8());
-    }
+    QByteArray dat;
+    QDataStream out(&dat, QIODevice::WriteOnly);
+    // out<<message;
+    out.writeRawData(reinterpret_cast<const char*>(&m),sizeof(m));
+
+    printf("write\n");
+//    QTextStream(stdout)<<dat;
+    
+    socket->write(dat);
 }
