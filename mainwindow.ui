@@ -17,11 +17,16 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>50</x>
       <y>0</y>
-      <width>81</width>
+      <width>121</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 45 oblique 15px &quot;URW Gothic L&quot;;
+</string>
     </property>
     <property name="text">
      <string>Debug Console</string>
@@ -32,123 +37,337 @@
      <rect>
       <x>220</x>
       <y>22</y>
-      <width>531</width>
-      <height>121</height>
+      <width>541</width>
+      <height>140</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="2">
-      <widget class="QLabel" name="table">
-       <property name="text">
-        <string>table</string>
+     <item row="3" column="0">
+      <widget class="QLabel" name="Card">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(176, 170, 255);
+border: 2px solid #6799FF;
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+</string>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="Moving">
        <property name="text">
-        <string>Moving</string>
+        <string>Card</string>
        </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="Work">
-       <property name="text">
-        <string>Work</string>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
       <widget class="QLabel" name="home">
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
        </property>
        <property name="text">
         <string>home</string>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QLabel" name="moving">
-       <property name="text">
-        <string>moving</string>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="stopped">
-       <property name="text">
-        <string>stopped</string>
+     <item row="1" column="0">
+      <widget class="QLabel" name="Moving">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(176, 170, 255);
+border: 2px solid #6799FF;
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+</string>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QLabel" name="interrupted">
        <property name="text">
-        <string>interrupted</string>
+        <string>Moving</string>
        </property>
-      </widget>
-     </item>
-     <item row="2" column="4">
-      <widget class="QLabel" name="serve">
-       <property name="text">
-        <string>serve</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="admin">
-       <property name="text">
-        <string>admin</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="succeeded">
-       <property name="text">
-        <string>succeeded</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="Card">
-       <property name="text">
-        <string>Card</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="QLabel" name="order">
-       <property name="text">
-        <string>order</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLabel" name="rest">
-       <property name="text">
-        <string>rest</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="mmoving">
-       <property name="text">
-        <string>moving</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLabel" name="failed">
-       <property name="text">
-        <string>failed</string>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="Position">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(176, 170, 255);
+border: 2px solid #6799FF;
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+</string>
+       </property>
        <property name="text">
         <string>Position State</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="failed">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>failed</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="stopped">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>stopped</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="succeeded">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>succeeded</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="Work">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(176, 170, 255);
+border: 2px solid #6799FF;
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Work</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="moving">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>moving</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="admin">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>admin</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="table">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+horizontalAlignment: AlignHCenter;</string>
+       </property>
+       <property name="text">
+        <string>table</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="serve">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>serve</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="mmoving">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>moving</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="rest">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+font:center;</string>
+       </property>
+       <property name="text">
+        <string>rest</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="order">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>order</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="interrupted">
+       <property name="styleSheet">
+        <string notr="true">
+background-color:#B2CCFF; 
+
+border-radius:20px;
+color:#FFFFFF;
+font-size:20px;
+font: 45 oblique 20px &quot;URW Gothic L&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>interrupted</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -157,10 +376,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>170</y>
+      <x>390</x>
+      <y>190</y>
       <width>71</width>
-      <height>94</height>
+      <height>122</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -169,6 +388,21 @@
      </property>
      <item>
       <widget class="QPushButton" name="bettery4">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(99, 255, 169); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -176,6 +410,21 @@
      </item>
      <item>
       <widget class="QPushButton" name="bettery3">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(99, 255, 169); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -183,6 +432,21 @@
      </item>
      <item>
       <widget class="QPushButton" name="bettery2">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(99, 255, 169); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -190,6 +454,21 @@
      </item>
      <item>
       <widget class="QPushButton" name="battery1">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(99, 255, 169); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -200,11 +479,16 @@
    <widget class="QLabel" name="lbBettery">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>180</y>
+      <x>310</x>
+      <y>200</y>
       <width>72</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 45 oblique 15px &quot;URW Gothic L&quot;;
+</string>
     </property>
     <property name="text">
      <string>Battery</string>
@@ -213,10 +497,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>170</y>
+      <x>560</x>
+      <y>190</y>
       <width>71</width>
-      <height>94</height>
+      <height>122</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -225,6 +509,18 @@
      </property>
      <item>
       <widget class="QPushButton" name="v4">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(252, 147, 255); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -232,6 +528,18 @@
      </item>
      <item>
       <widget class="QPushButton" name="v3">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(252, 147, 255); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -239,6 +547,19 @@
      </item>
      <item>
       <widget class="QPushButton" name="v2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(252, 147, 255); 
+border: 4px solid #FFFFFF;
+
+}
+</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -246,6 +567,18 @@
      </item>
      <item>
       <widget class="QPushButton" name="v1">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgb(199, 199, 199); 
+border: 4px solid #FFFFFF;
+}
+
+QPushButton:pressed{
+background-color:rgb(252, 147, 255); 
+border: 4px solid #FFFFFF;
+
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -256,11 +589,16 @@
    <widget class="QLabel" name="lbVelocity">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>180</y>
+      <x>480</x>
+      <y>200</y>
       <width>72</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 45 oblique 15px &quot;URW Gothic L&quot;;
+</string>
     </property>
     <property name="text">
      <string>Velocity</string>
@@ -269,11 +607,16 @@
    <widget class="QLabel" name="lbBetteryC">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>210</y>
+      <x>310</x>
+      <y>230</y>
       <width>72</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 45 oblique 15px &quot;URW Gothic L&quot;;
+</string>
     </property>
     <property name="text">
      <string>Battery</string>
@@ -282,11 +625,16 @@
    <widget class="QLabel" name="lbVelocityC">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>210</y>
+      <x>480</x>
+      <y>230</y>
       <width>72</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 45 oblique 15px &quot;URW Gothic L&quot;;
+</string>
     </property>
     <property name="text">
      <string>Velocity</string>
@@ -301,6 +649,11 @@
       <height>351</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(217,229,255);
+border-image: url(:/transparent.png);
+image: url(:/qt-logo.ico);</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -309,7 +662,7 @@
      <x>0</x>
      <y>0</y>
      <width>780</width>
-     <height>21</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>
