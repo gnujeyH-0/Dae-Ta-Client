@@ -32,7 +32,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h\
-        client.h
+        client.h\
+        message.h
 
 FORMS += \
         mainwindow.ui

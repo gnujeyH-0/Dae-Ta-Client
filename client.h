@@ -2,6 +2,7 @@
 #define CLIENT_H
 
 #include <QWidget>
+#include "message.h"
 
 class QTcpSocket;
 
@@ -11,6 +12,11 @@ class client:public QWidget
 
 public:
     explicit client(QWidget *parent = 0);
+    Message m;
+
+signals:
+    void lineReaded();
+    void connectedSignal();
 
 private slots:
     void readyRead();
