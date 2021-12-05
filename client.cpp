@@ -40,7 +40,7 @@ void client::connected()
 }
 
 void client::sendMessage(QString message){
-     message=QString("hello world!").trimmed();
+    message=QString("hello world!").trimmed();
     if(!message.isEmpty())
     {
         socket->write(QString(message+"\n").toUtf8());

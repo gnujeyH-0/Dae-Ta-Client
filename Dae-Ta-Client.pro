@@ -30,7 +30,7 @@ SOURCES += \
         client.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h\
         client.h
 
 FORMS += \
