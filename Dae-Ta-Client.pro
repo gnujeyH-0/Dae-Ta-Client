@@ -8,7 +8,7 @@ QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Dae-Ta-Cleint
+TARGET = Dae-Ta-Client
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -22,7 +22,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-CONFIG += c++11
+CONFIG += c++11\
+CONFIG += console
 
 SOURCES += \
         main.cpp \
@@ -31,7 +32,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h\
-        client.h
+        client.h\
+        message.h
 
 FORMS += \
         mainwindow.ui
