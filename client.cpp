@@ -12,7 +12,7 @@ client::client(QWidget *parent):
 
     connect(socket,SIGNAL(readyRead()),this,SLOT(readyRead()));
     connect(socket,SIGNAL(connected()),this,SLOT(connected()));
-    socket->connectToHost("127.0.0.1",8520);
+    socket->connectToHost("192.168.137.141",8520);
 }
 
 void client::readyRead()
@@ -37,10 +37,11 @@ void client::connected()
         // QTextStream(stdout)<<"client message:"<<message<<endl;
     //     QThread::usleep(1000000);
     // }
+    sendMessage("hi\n");
 }
 
 void client::sendMessage(QString message){
-    message=QString("hello world!").trimmed();
+//    message=QString("hello world!").trimmed();
     if(!message.isEmpty())
     {
         socket->write(QString(message+"\n").toUtf8());

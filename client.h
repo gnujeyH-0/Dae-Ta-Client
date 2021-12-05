@@ -15,6 +15,8 @@ public:
 private slots:
     void readyRead();
     void connected();
+
+public:
     void sendMessage(QString);
 
 private:
