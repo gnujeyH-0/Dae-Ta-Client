@@ -388,7 +388,7 @@ void MainWindow::updateWindow()
     else if (c->m.bettery > 50)
     {
         ui->bettery1->setStyleSheet("QPushButton{"
-                                    "background-color:rgb(187,187,187);;"
+                                    "background-color:rgb(99, 255, 169);"
                                     "}");
         ui->bettery2->setStyleSheet("QPushButton{"
                                     "background-color:rgb(99, 255, 169);" 
@@ -399,7 +399,7 @@ void MainWindow::updateWindow()
                             "border: 4px solid #FFFFFF;"
                                     "}");
         ui->bettery4->setStyleSheet("QPushButton{"
-                                    "background-color:rgb(199, 199, 199);" 
+                                    "background-color:rgb(187,187,187);" 
                             "border: 4px solid #FFFFFF;"
                                     "}");
     }
