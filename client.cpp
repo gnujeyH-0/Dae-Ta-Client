@@ -11,8 +11,8 @@ client::client(QWidget *parent) : QWidget(parent)
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
     connect(socket, SIGNAL(connected()), this, SLOT(connected()));
     connect(socket, SIGNAL(connected()), this, SIGNAL(connectedSignal()));
-    //  socket->connectToHost("192.168.137.140", 8520);
-   socket->connectToHost("127.0.0.1", 8520);
+   socket->connectToHost("192.168.137.140", 8520);
+//    socket->connectToHost("127.0.0.1", 8520);
 }
 
 void client::readyRead()
@@ -38,7 +38,7 @@ void client::readyRead()
 void client::connected()
 {
     printf("connected\n");
-    socket->write(QString("connected from client\n").toUtf8());
+    // socket->write(QString("connected from client\n").toUtf8());
     emit connectedSignal();
 }
 
