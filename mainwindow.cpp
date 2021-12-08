@@ -123,10 +123,11 @@ void MainWindow::updateVelocity4()
 }
 
 void MainWindow::updateVelocity()
-{
+{ 
     ui->listWidget->addItem(QString("velocity Changed -> %1").arg(velocity));
     ui->listWidget->scrollToBottom();
     ui->lbVelocityC->setText(QString("%1").arg(velocity));
+    c->m.velocity=velocity;
     c->sendMessage();
 }
 
