@@ -7,13 +7,11 @@
 class Message{
 public:
     Location stateLocation;
-//    QString textmsg;
-//    int bettery;
-//    int velocity;
-//    int interrupt;
-//    int moving;
-//    int card;
-//    int work;
+    int bettery;
+    int velocity;
+    int moving;
+    int card;
+    int work;
 };
 
 #endif // MESSAGE_H

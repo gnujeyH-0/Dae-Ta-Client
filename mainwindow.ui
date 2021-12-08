@@ -453,7 +453,7 @@ border: 4px solid #FFFFFF;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="battery1">
+      <widget class="QPushButton" name="bettery1">
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>

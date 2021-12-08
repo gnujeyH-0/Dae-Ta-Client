@@ -21,9 +21,9 @@ signals:
 private slots:
     void readyRead();
     void connected();
-
-public:
-    void sendMessage(QString);
+    
+public slots:
+    void sendMessage();
 
 private:
     QTcpSocket* socket;
